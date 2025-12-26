@@ -1,0 +1,114 @@
+:root {
+  --bg: #0f172a;
+  --calc: #020617;
+  --btn: #1e293b;
+  --operator: #eab25d;
+  --equal: #ad8736;
+  --text: #f8fafc;
+  --error: #f87171;
+}
+
+body.light {
+  --bg: #f5f5f5;
+  --calc: #ffffff;
+  --btn: #e5e7eb;
+  --text: #020617;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.theme-toggle {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: var(--equal);
+  font-weight: bold;
+}
+
+.calculator {
+  width: 320px;
+  margin: 10px auto 40px;
+  background: var(--calc);
+  padding: 20px;
+  border-radius: 18px;
+}
+
+#display {
+  background: #000;
+  color: #fff;
+  font-size: 2.3rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 18px;
+  font-size: 1.2rem;
+  background: var(--btn);
+  color: var(--text);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.operator {
+  background: var(--operator);
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.equal {
+  background: var(--equal);
+  color: #1a1a1a;
+  font-weight: bold;
+  grid-row: span 2;
+  border-radius: 12px;
+}
+
+.zero {
+  grid-column: span 2;
+  border-radius: 40px;
+}
+
+.error {
+  color: var(--error);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
+}
